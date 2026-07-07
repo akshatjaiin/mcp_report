@@ -431,6 +431,12 @@ Output:
 6) verify_script_integration / verify_dns_infrastructure blocked by plan limits
    - Calls: #42–#45
    - Output: 402 plan limit (expected, but blocks regression on multiple active domains)
+  
+8) get_project_page_views accepts invalid timeline label
+- Call: domain_id=4354 (no timeline param)
+- Output: Timeline reported as "Yearly" even though default should be last7 (inconsistent with earlier call)
+- // not a bug but mostly jagah default sayad week hai apna cross check kar lena
+
 
 ## Notes
 - No codebase access used.
